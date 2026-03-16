@@ -4,15 +4,17 @@ import federation from '@originjs/vite-plugin-federation'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),
-  federation({
-    name: 'todo',  
-    filename: 'remoteEntry.js',
-    exposes: {
-      './App': './src/App.jsx',  
-    },
-    shared: ['react', 'react-dom'],
-  }),],
+  plugins: [
+    react(),
+    federation({
+      name: 'my_react_app',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './App': './src/App.jsx',
+      },
+      shared: ['react', 'react-dom'],
+    }),
+  ],
   build: {
     target: 'esnext',
     minify: false,
