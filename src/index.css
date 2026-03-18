@@ -53,19 +53,22 @@ input {
 input[type="text"] {
   border-radius: 0;
 }
+html,
+body {
+  min-height: 100vh;
+}
 body {
   background-color: whitesmoke;
   color: #4d4d4d;
   font:
-    1.6rem/1.25 "Arial",
+    1.8rem/1.25 "Arial",
     sans-serif;
-  margin: 0 auto;
-  max-width: 68rem;
+  margin: 0;
   width: 100%;
 }
 @media screen and (width >= 620px) {
   body {
-    font-size: 1.9rem;
+    font-size: 2.1rem;
     line-height: 1.31579;
   }
 }
@@ -73,12 +76,13 @@ body {
 /* Global styles */
 .form-group > input[type="text"] {
   display: inline-block;
-  margin-top: 0.4rem;
+  margin-top: 0.25rem;
 }
 .btn {
-  border: 0.2rem solid #4d4d4d;
+  border: 0.15rem solid #4d4d4d;
   cursor: pointer;
-  padding: 0.8rem 1rem 0.7rem;
+  padding: 0.5rem 0.8rem 0.45rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
 }
 .btn.toggle-btn {
@@ -109,7 +113,7 @@ body {
   flex: 1 1 49%;
 }
 .btn-group > * + * {
-  margin-left: 0.8rem;
+  margin-left: 0.5rem;
 }
 .label-wrapper {
   flex: 0 0 100%;
@@ -129,17 +133,17 @@ body {
   margin-top: 0;
 }
 .stack-small > * + * {
-  margin-top: 1.25rem;
+  margin-top: 0.6rem;
 }
 .stack-large > * + * {
-  margin-top: 2.5rem;
+  margin-top: 1.2rem;
 }
 @media screen and (width >= 550px) {
   .stack-small > * + * {
-    margin-top: 1.4rem;
+    margin-top: 0.7rem;
   }
   .stack-large > * + * {
-    margin-top: 2.8rem;
+    margin-top: 1.4rem;
   }
 }
 .stack-exception {
@@ -152,19 +156,21 @@ body {
   box-shadow:
     0 2px 4px 0 rgb(0 0 0 / 20%),
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
-  margin: 2rem 0 4rem 0;
+  margin: 1.5rem auto 3rem;
+  max-width: 72rem;
   padding: 1rem;
   position: relative;
+  width: 100%;
 }
 @media screen and (width >= 550px) {
   .todoapp {
-    padding: 4rem;
+    padding: 2rem;
   }
 }
 .todoapp > * {
   margin-left: auto;
   margin-right: auto;
-  max-width: 50rem;
+  max-width: 100%;
 }
 .todoapp > form {
   max-width: 100%;
@@ -172,20 +178,26 @@ body {
 .todoapp > h1 {
   display: block;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
+  font-size: 2.2rem;
   max-width: 100%;
   text-align: center;
+}
+.todoapp > h2 {
+  font-size: 1.6rem;
 }
 .label__lg {
   line-height: 1.01567;
   font-weight: 300;
-  margin-bottom: 1rem;
-  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem;
+  font-size: 1.6rem;
   text-align: center;
 }
 .input__lg {
-  border: 2px solid black;
-  padding: 2rem;
+  border: 1.5px solid black;
+  padding: 0.7rem 1rem;
+  font-size: 1.6rem;
 }
 .input__lg:focus-visible {
   border-color: #4d4d4d;
@@ -193,15 +205,15 @@ body {
 }
 [class*="__lg"] {
   display: inline-block;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   width: 100%;
 }
 [class*="__lg"]:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 @media screen and (width >= 620px) {
   [class*="__lg"] {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
 }
 /* End general app styles */
@@ -215,9 +227,10 @@ body {
   flex: 0 0 100%;
 }
 .todo-text {
-  border: 2px solid #565656;
-  min-height: 4.4rem;
-  padding: 0.4rem 0.8rem;
+  border: 1.5px solid #565656;
+  min-height: 3rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 1.5rem;
   width: 100%;
 }
 .todo-text:focus-visible {
@@ -231,20 +244,20 @@ body {
   clear: left;
   display: block;
   font-family: "Arial", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: normal;
   line-height: 1.25;
-  min-height: 44px;
-  padding-left: 40px;
+  min-height: 32px;
+  padding-left: 32px;
   position: relative;
 }
 .c-cb > label::before,
 .c-cb > input[type="checkbox"] {
   box-sizing: border-box;
-  height: 44px;
+  height: 32px;
   left: -2px;
   top: -2px;
-  width: 44px;
+  width: 32px;
 }
 .c-cb > input[type="checkbox"] {
   -webkit-font-smoothing: antialiased;
@@ -261,7 +274,7 @@ body {
   font-size: inherit;
   line-height: inherit;
   margin-bottom: 0;
-  padding: 8px 15px 5px;
+  padding: 5px 12px 4px;
   touch-action: manipulation;
 }
 .c-cb > label::before {
@@ -281,13 +294,13 @@ body {
   border-top-color: transparent;
   box-sizing: content-box;
   content: "";
-  height: 7px;
-  left: 9px;
+  height: 6px;
+  left: 8px;
   opacity: 0;
   position: absolute;
-  top: 11px;
+  top: 9px;
   transform: rotate(-45deg);
-  width: 18px;
+  width: 14px;
 }
 .c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
